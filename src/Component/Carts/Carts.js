@@ -5,7 +5,11 @@ import "./Carts.css"
 const Carts = () => {
 
     const [carts, setcarts] = useState([])
+    const [cart, setcart]=useState([])
 
+    const handleAddToCart = (name) =>{
+        console.log(name);
+    }
    
         useEffect(()=> {
             fetch("https://raw.githubusercontent.com/mir-hussain/guns/main/data.json")
@@ -22,13 +26,18 @@ const Carts = () => {
                 {
                     carts.map(cart=> <Cart
                     key={cart.id}
-                    cart={cart}></Cart>)
+                    cart={cart}
+                    handleAddToCart={handleAddToCart}></Cart>)
                 }
 
             </div>
 
             <div classNam="info-container" >
+                    <div>
                     <h1>this site sectione </h1>
+                    </div>
+                    <button>Choose One For Me</button>
+                
             </div>
 
 
