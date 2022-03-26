@@ -28,7 +28,7 @@ const Carts = () => {
             </div>
 
             <div classNam="info-container" >
-
+                    <h1>this site sectione </h1>
             </div>
 
 
