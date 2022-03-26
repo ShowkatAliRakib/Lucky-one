@@ -8,7 +8,7 @@ const Carts = () => {
     const [cart, setcart]=useState([])
 
     const handleAddToCart = (gun) =>{
-       const newGunCart = [gun]
+       const newGunCart = [...cart, gun]
         setcart(newGunCart);
         
      
@@ -37,18 +37,18 @@ const Carts = () => {
 
             <div classNam="info-container" >
                     <div>
-                    <h1>Gun Info : </h1>
+                    <h4>Selected Cart</h4>
                     { 
                        cart.map(item=> <h3 key={item.id}>{item.name}</h3>)
                     }
                     </div>
-                    <button>Choose One For Me</button>
+                    <button className='icon'>Choose One</button>
                 
             </div>
 
 
         </div>
-    
+       
     );
 };
 

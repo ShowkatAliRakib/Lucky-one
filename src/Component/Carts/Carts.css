@@ -1,9 +1,17 @@
 .gun-container{
     display:grid;
     grid-template-columns: 10fr 2fr;
+ 
 }
 
 .carts-container{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+
+h4{
+    color: rgb(30, 130, 224);
+    margin: 20px;
+    font-size: 1.7rem;
 }
