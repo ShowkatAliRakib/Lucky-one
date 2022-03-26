@@ -7,8 +7,11 @@ const Carts = () => {
     const [carts, setcarts] = useState([])
     const [cart, setcart]=useState([])
 
-    const handleAddToCart = (name) =>{
-        console.log(name);
+    const handleAddToCart = (gun) =>{
+       const newGunCart = [gun]
+        setcart(newGunCart);
+        
+     
     }
    
         useEffect(()=> {
@@ -24,9 +27,9 @@ const Carts = () => {
             <div className="carts-container">
 
                 {
-                    carts.map(cart=> <Cart
-                    key={cart.id}
-                    cart={cart}
+                    carts.map(guncart=> <Cart
+                    key={guncart.id}
+                    guncart={guncart}
                     handleAddToCart={handleAddToCart}></Cart>)
                 }
 
@@ -34,7 +37,10 @@ const Carts = () => {
 
             <div classNam="info-container" >
                     <div>
-                    <h1>this site sectione </h1>
+                    <h1>Gun Info : </h1>
+                    { 
+                       cart.map(item=> <h3 key={item.id}>{item.name}</h3>)
+                    }
                     </div>
                     <button>Choose One For Me</button>
                 
