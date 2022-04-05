@@ -36,12 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.Question{
-  width: 90%;
-  padding: 20px;
-  border:2px solid rgb(12, 191, 214);
-  margin: 10px;
-  box-shadow: 10px 10px 5px #b6a5a5
-  
-  
-}
